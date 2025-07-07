@@ -15,7 +15,7 @@ import {
   Box,
 } from "@mui/material";
 
-const API_URL = "https://arduino-7mkq.onrender.com/api/data"; // Replace with your actual endpoint
+const API_URL = "https://arduino-7mkq.onrender.com/api/data"; 
 
 function App() {
   const [data, setData] = useState([]);
