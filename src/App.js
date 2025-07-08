@@ -15,7 +15,7 @@ import {
   Box,
 } from "@mui/material";
 
-const API_URL = "https://arduino-7mkq.onrender.com/api/data"; 
+const API_URL = "https://arduino-7mkq.onrender.com/api/data";
 
 function App() {
   const [data, setData] = useState([]);
@@ -42,7 +42,7 @@ function App() {
   return (
     <Container maxWidth="md" style={{ padding: "2rem" }}>
       <Typography variant="h4" gutterBottom align="center">
-        🌡️ IoT Temperature Dashboard
+        Ultrasonic sensor Distance Dashboard
       </Typography>
 
       {loading ? (
@@ -60,9 +60,9 @@ function App() {
             }}
           >
             <CardContent>
-              <Typography variant="h5">Latest Temperature</Typography>
+              <Typography variant="h5">Latest Distance</Typography>
               <Typography variant="h2">
-                {latest?.temperature.toFixed(1)}°C
+                {latest?.temperature.toFixed(1)} cm
               </Typography>
               <Typography variant="body2">
                 {new Date(latest?.created_at).toLocaleString()}
@@ -78,7 +78,7 @@ function App() {
                     <strong>ID</strong>
                   </TableCell>
                   <TableCell>
-                    <strong>Temperature (°C)</strong>
+                    <strong>Distance (cm)</strong>
                   </TableCell>
                   <TableCell>
                     <strong>Timestamp</strong>
